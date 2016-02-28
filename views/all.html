@@ -1,0 +1,31 @@
+<nav>
+	<a href="./home">Vote Each Style</a>
+	<a class="active" href="./all">All Styles</a>
+	<a href="./standings">Standings</a>
+</nav>
+
+<div class="wrapper">
+	{{#if photos}}
+
+		<ul>
+			{{#each photos}}
+			<li>
+				<img src="photos/{{this.name}}" alt="Style image" />
+				<div class="button-holder">
+					<form action="./cute" method="post">
+						<input type="hidden" name="photo" value="{{this.name}}" />
+						<input type="submit" value="Cute!" />
+					</form>
+					<form action="./notcute" method="post">
+						<input type="hidden" name="photo" value="{{this.name}}" />
+						<input type="submit" value="Not Cute!" />
+					</form>
+				</div>
+			</li>
+
+			{{/each}}
+
+		</ul>
+
+	{{/if}}
+</div>

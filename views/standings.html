@@ -1,0 +1,25 @@
+<nav>
+	<a href="./home">Vote Each Style</a>
+	<a href="./all">All Styles</a>
+	<a class="active" href="./standings">Standings</a>
+</nav>
+
+<div class="wrapper">
+	{{#if standings}}
+
+		<ul>
+
+			{{#each standings}}
+			
+			<li>
+				<img src="photos/{{name}}" alt="Style thumbnail" />
+				<p class="up">{{this.likes}}</p>
+				<p class="down">{{this.dislikes}}</p>
+			</li>
+
+			{{/each}}
+
+		</ul>
+
+	{{/if}}
+</div>

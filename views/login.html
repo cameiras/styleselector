@@ -1,0 +1,26 @@
+<html>
+<body>
+  	<div class="login">
+  		{{#if error}}
+	  		<div class="alert alert-danger alert-dismissible" role="alert">
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  <strong>Warning!</strong> Either the password is wrong or not set.
+			</div>
+		{{/if}}
+
+  		Pick User: 
+		<select class="user" form="login" name="userlist">
+		  <option value="SerenaS">Serena S</option>
+		  <option value="Saph">Saph</option>
+		  <option value="Meredith">Mere</option>
+		  <option value="Elisa">Elisa</option>
+		  <option value="SerenaC">Serena C</option>
+		</select><br>
+  		<form action='/login' method='post' id="login">
+		Password: 
+		<input type="text" name="pwd" value="" placeholder="Insert Password"><br>
+		<input type="submit" value="Submit">
+		</form>
+  </div>
+</body>
+</html>
